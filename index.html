@@ -1,1 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAFEED — Proteção Total Contra Discriminação</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
 
+  <div class="blur-bg circle-1"></div>
+  <div class="blur-bg circle-2"></div>
+  <div class="blur-bg circle-3"></div>
+
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-icon">🛡️</span>
+      <span class="logo-text">SA<span class="highlight">FEED</span></span>
+    </div>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#simulador">Testar Bloqueio</a>
+      <a href="#celular">No Celular</a>
+      <a href="#codigo">Código Dev</a>
+    </nav>
+    <button class="btn btn-outline" id="btn-api-key">Ativar Proteção</button>
+  </header>
+
+  <section id="inicio" class="hero">
+    <span class="badge">🛡️ Bloqueio Activo em Tempo Real</span>
+    <h1>Nenhum comentário racista ou ofensivo <span class="gradient-text">chega até você</span></h1>
+    <p>O SAFEED é o filtro que roda no celular do usuário e apaga comentários de ódio e preconceito em qualquer app de vídeo ou mensagem antes que eles possam ser lidos.</p>
+    
+    <div class="hero-buttons">
+      <a href="#simulador" class="btn btn-primary btn-lg">Testar Filtro Anti-Ódio</a>
+      <a href="#celular" class="btn btn-secondary btn-lg">Como Funciona no Celular</a>
+    </div>
+  </section>
+
+  <section id="simulador" class="simulator-section">
+    <div class="section-title">
+      <h2>Simulador de Bloqueio Instantâneo</h2>
+      <p>Teste enviar frases ofensivas. O SAFEED irá detectar e apagar o comentário imediatamente.</p>
+    </div>
+
+    <div class="simulator-card">
+      <div class="app-selector">
+        <button class="app-tab active" data-app="video">🎥 App de Vídeo / Lives</button>
+        <button class="app-tab" data-app="chat">💬 App de Mensagens</button>
+        <button class="app-tab" data-app="social">🌐 Rede Social</button>
+      </div>
+
+      <div class="sim-body">
+        <div class="sim-header">
+          <span id="sim-app-title">Modo: App de Vídeo / Lives</span>
+          <span class="status-indicator online">● SAFEED Protegendo</span>
+        </div>
+
+        <div id="sim-feed" class="sim-feed">
+          <div class="chat-msg safe">
+            <strong>@sistema:</strong> Proteção ativa. Comentários racistas e ofensivos serão bloqueados e apagados.
+          </div>
+        </div>
+
+        <div class="sim-input-box">
+          <input type="text" id="sim-input" placeholder="Escreva um comentário para testar o filtro..." />
+          <button id="btn-send-sim" class="btn btn-primary">Enviar</button>
+        </div>
+
+        <div class="presets">
+          <span>Testar conteúdos:</span>
+          <button class="btn-preset safe-btn" data-text="Vídeo muito legal! Parabéns pelo conteúdo.">✅ Mensagem Positiva</button>
+          <button class="btn-preset danger-btn" data-text="Cabelo feio de macaco, odeio essa raça">🚨 Racismo</button>
+          <button class="btn-preset danger-btn" data-text="Volta pra sua terra seu lixo preconceituoso">⚠️ Xenofobia / Ódio</button>
+        </div>
+      </div>
+
+      <div class="audit-results">
+        <h3>📊 Relatório de Auditoria da Mensagem</h3>
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <span>Discurso Racista / Preconceito</span>
+            <div class="bar-bg"><div id="bar-racism" class="bar-fill green" style="width: 0%"></div></div>
+            <strong id="val-racism">0%</strong>
+          </div>
+          <div class="metric-item">
+            <span>Ofensas / Incitação ao Ódio</span>
+            <div class="bar-bg"><div id="bar-hate" class="bar-fill green" style="width: 0%"></div></div>
+            <strong id="val-hate">0%</strong>
+          </div>
+          <div class="metric-item">
+            <span>Agressividade Geral</span>
+            <div class="bar-bg"><div id="bar-tox" class="bar-fill green" style="width: 0%"></div></div>
+            <strong id="val-tox">0%</strong>
+          </div>
+        </div>
+        <p id="audit-verdict" class="audit-verdict safe-verdict">Aguardando mensagem para análise...</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="celular" class="mobile-section">
+    <div class="section-title">
+      <h2>📱 Funcionamento no Celular do Usuário</h2>
+      <p>Como a tecnologia impede que mensagens ofensivas apareçam na sua tela.</p>
+    </div>
+
+    <div class="mobile-grid">
+      <div class="card card-pink">
+        <div class="icon-box">🔍</div>
+        <h3>1. Leitura Prévia de Tela</h3>
+        <p>A tecnologia lê comentários e textos em tempo real antes de o olho humano processar a imagem.</p>
+      </div>
+      <div class="card card-blue">
+        <div class="icon-box">🗑️</div>
+        <h3>2. Remoção / Ocultação</h3>
+        <p>Mensagens identificadas como racistas ou ofensivas são totalmente apagadas ou cobertas por uma tarja de proteção.</p>
+      </div>
+      <div class="card card-green">
+        <div class="icon-box">🛡️</div>
+        <h3>3. Ambiente Saudável</h3>
+        <p>Garante que navegadores, redes sociais e apps de vídeo fiquem livres de assédio e discriminação.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="codigo" class="code-section">
+    <div class="section-title">
+      <h2>Código do Filtro Anti-Ódio (SDK)</h2>
+      <p>Lógica de bloqueio estrito pronta para integração.</p>
+    </div>
+
+    <div class="code-box">
+      <pre><code id="code-display">// Função de filtro com tolerância zero para racismo e ofensas
+function filtrarComentario(texto) {
+  const termosProibidos = ["macaco", "preto feio", "lixo", "racista", "odeio essa raça", "volta pra sua terra"];
+  const contemOfensa = termosProibidos.some(termo => texto.toLowerCase().includes(termo));
+
+  if (contemOfensa) {
+    // Apaga o comentário e impede a exibição
+    return { exibido: false, motivo: "Conteúdo ofensivo ou racista apagado pelo SAFEED" };
+  }
+  return { exibido: true, conteudo: texto };
+}</code></pre>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 <strong>SAFEED</strong> — Proteção Total Contra Discriminação e Ódio Digital.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
